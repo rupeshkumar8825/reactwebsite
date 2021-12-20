@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+// in this we will combine our all the components and then we will export it to the index.js 
+import React from 'react';
 
 function App() {
+  console.log("right now in the app component");
+
+  // say everything went fine 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <h1>Hi this is the rupesh building the website for the learning purpose.</h1>
+    </>
+  )
 }
 
+// now we also have to export this to the index.js 
 export default App;
