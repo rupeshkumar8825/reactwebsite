@@ -1,14 +1,15 @@
-// in this we will make the first website using the react for the learning purpose 
+// we have to use the react for makign this website 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from "./App";
 
-// using the reactdom to render the content 
+
+// now calling the function to render the page 
 ReactDOM.render(
   <>
     <App></App>
   </>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 
-
+// say everything went fine 

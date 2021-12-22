@@ -1,44 +1,41 @@
-// in this we will combine our all the components and then we will export it to the index.js 
+// now in this we will collect all the components of the website and then we export this 
 import React from 'react';
-// import Navbar from './components/Navbar';
 import {
   BrowserRouter as Router,
-  Route,
   Routes,
+  Route,
 
 } from "react-router-dom";
 import About from './About';
+import Home from './Home';
 import Services from './Services';
-import Contact from './Contact';
-import Home from "./Home";
-import Navbar from './Navbar';
-// we also have to import the bootstrap to use this 
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-// we also have to add the bootstrap javascript to use this 
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
+import Contact from "./Contact";
 
-
+// defining the function for this purpose 
 function App() {
-  console.log("right now in the app component");
+  console.log("this is the app component");
 
   // say everything went fine 
   return (
     <>
-      {/* adding the navbar  */}
+      {/* here we have to create the route for the website  */}
       <Router>
-        {/* <Navbar></Navbar> */}
-        {/* we have to create the routing here  */}
-        <Navbar></Navbar>
+        {/* <Routes> */}
+        {/* <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/services" component={Services} />
+          <Route exact path="/contact" component={Contact} /> */}
         <Routes>
-          <Route path="/" element={<Home></Home>}></Route>
-          <Route path="/about" element={<About></About>}></Route>
-          <Route path="/services" element={<Services></Services>}></Route>
-          <Route path="/contact" element={<Contact></Contact>}></Route>
+          <Route path="/about" element={<About></About>} />
+          <Route path="/" element={<Home></Home>} />
+          <Route path="/services" element={<Services></Services>} />
+          <Route path="/contact" element={<Contact></Contact>} />
         </Routes>
+        {/* </Routes> */}
       </Router>
     </>
-  )
+  );
 }
 
-// now we also have to export this to the index.js 
+// now we have to export this so that other files can also use this 
 export default App;
